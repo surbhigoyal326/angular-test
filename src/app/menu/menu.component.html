@@ -1,0 +1,18 @@
+<header>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <div><a class="navbar-brand" href="">Navbar</a></div>
+
+  <ul class = "navbar-nav">
+    <li><a *ngIf="basicAuthenticationService.isUserLoggedIn()" class="nav-link" [routerLink]="['/welcome/admin']" routerLinkActive="router-link-active">Home</a></li>
+    <li><a  *ngIf="basicAuthenticationService.isUserLoggedIn()" class="nav-link" [routerLink]="['/todos']" routerLinkActive="router-link-active">Todos</a></li>
+     </ul>
+     <ul class = "navbar-nav navbar-collapse justify-content-end">
+      <li><a *ngIf="!basicAuthenticationService.isUserLoggedIn()" [routerLink]="['/login']" routerLinkActive="router-link-active" class="nav-link">Login</a></li>
+      <li><a *ngIf="basicAuthenticationService.isUserLoggedIn()" [routerLink]="['/logout']" routerLinkActive="router-link-active" class="nav-link">Logout</a></li>
+       </ul>
+
+</nav>
+</header>
+
+
+
